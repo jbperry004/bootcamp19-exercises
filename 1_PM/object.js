@@ -3,5 +3,7 @@
 // HINT: recursion may help here
 
 const hasFalsyValue = obj => {
-  return false;
-};
+  // WORK IN PROGRESS 
+  // const values = Object.values(obj)
+   // if values.forEach(element => {
+  // };
