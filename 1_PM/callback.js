@@ -8,7 +8,7 @@ const coinToss = (guess, callback) => {
   callback(didWin);
 };
 
-const getUser = callback => {
+const getUser = (callback) => {
   const user = {
     firstName: "John",
     lastName: "Doe",
@@ -16,3 +16,10 @@ const getUser = callback => {
   };
   callback(user);
 };
+
+getUser(user => {
+  const { guess } = user;
+  coinToss(guess, res => console.log(`Your guess was ${res}`))
+})
+
+
