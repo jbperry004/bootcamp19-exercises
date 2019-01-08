@@ -43,15 +43,16 @@ const zip = (arr1, arr2) => {
   // Example: zip([1, 2, 3], [5, 3, 1]) === [[1, 5], [2, 3], [3, 1]]
 };
 
-let arr1 = [];
+const arr1 = [];
+const arr2 = [];
 const unzip = arr => {
   for(let i = 0; i < arr.length; i++) {
     arr1.push(arr[i][0])
     arr2.push(arr[i][1])
   }
-  return arr1, arr2 
-  // a function which does the opposite of `zip()`
+  return [arr1, arr2]
 };
+
 
 const shiftRight = (str, num) => {
   
