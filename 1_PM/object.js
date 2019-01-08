@@ -3,5 +3,16 @@
 // HINT: recursion may help here
 
 const hasFalsyValue = obj => {
-  return false;
+  if (!(typeof obj === 'object')) {
+    console.log(`obj ${obj}`)
+    return !!obj
+  }
+  for (let objs in obj){
+    console.log(objs)
+    return !!obj && hasFalsyValue(Object.values(objs))
+  }
 };
+
+const val = {a: {b: {c:5}}}
+// console.log(typeof [1,2,3] === 'object');
+console.log(hasFalsyValue(val))
