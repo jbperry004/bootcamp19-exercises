@@ -3,7 +3,11 @@
 // HINT: recursion may help here
 
 const hasFalsyValue = obj => {
-  // WORK IN PROGRESS 
-  // const values = Object.values(obj)
-   // if values.forEach(element => {
-  // };
+  for(let key in obj) {
+    if(obj[key])
+      continue
+    else 
+      return false
+  };
+  return false;
+};
