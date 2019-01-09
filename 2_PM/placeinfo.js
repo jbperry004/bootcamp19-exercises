@@ -5,10 +5,27 @@
 
 const googleMapsClient = require('./google_api')
 
-const clivariable = process.argv[2]
 
-// WIP 
-googleMapsClient.place({placeid: String(clivariable)}).asPromise()
+googleMapsClient.findPlace(
+    // the documentation describes the inputtype and employ promises
+    {input: process.argv[2], inputtype: 'textquery'}).asPromise()
+    .then((response) => {
+        //
+        const placeid = response.json.candidates[0].place_id
+        googleMapsClient.place({placeid}).asPromise()
+            .then(response => {
+                const{lat, long} = response.json.result.geometry.location
+                console.log(`${process.argv[2]} is located at coordinates ${lat} and ${long}`)
+            }).catch(err => {
+                //should always have a .catch for each .then, helps with de-bugging 
+                console.log(err)
+            })
+    // this is incomplete! 
+    })
+
+
+
+googleMapsClient.place({placeid: process.argv[2]}).asPromise()
     .then((response) => {
         console.log(response.json.results);
     })

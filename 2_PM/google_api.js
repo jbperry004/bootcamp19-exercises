@@ -1,7 +1,10 @@
-// TODO - create client object for Google API connection which can be exported
+// Create client object for Google API connection which can be exported
+
+//Include the API key information from config 
+const config = require ('./config')
 
 const googleMapsClient = require('@google/maps').createClient({
-    key: 'process.env.ENV_VARIABLE',
+    key: config.apikey,
     Promise: Promise
   });
 
