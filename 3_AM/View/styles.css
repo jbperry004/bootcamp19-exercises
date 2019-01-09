@@ -1,0 +1,49 @@
+body {
+    background-color: #E8BF56;
+}
+h1, h2, h3, div, p, table {
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+}
+
+h1, h2, h3, ul, table {
+    color: #ffffff; 
+}
+
+ul {
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+}
+table, th, td {
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+
+a:visited, a:link {
+    color: white;
+    background-color: transparent;
+}
+
+a:hover {
+    color: black; 
+}
+
+div.polaroid {
+    width: 30%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  
+  div.container {
+    text-align: center;
+    padding: 10px 20px;
+  }

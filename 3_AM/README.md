@@ -16,10 +16,10 @@ app.get("/about", (req, res) => {
 
 Your website must include the following elements:
 
-- at least 4 separate pages
-- one table
-- three images
-- a navigation bar where you can access every page
+- at least 4 separate pages, done
+- one table, done
+- three images, done
+- a navigation bar where you can access every page, done 
 - two clickable images
 - four links to external pages
 - one bulleted list
